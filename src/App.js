@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Poster from './components/Poster'
+import Info from './components/Info'
+
+
+const layout = {
+	display: 'flex',
+	justifyContent: 'center',
+  	flexFlow: 'row nowrap',
+	border: 'red'
+}
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App" style={layout}>
+	<Poster></Poster>
+	<Info></Info>
+	
+</main>
   );
 }
 
