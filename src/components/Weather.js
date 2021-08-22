@@ -17,21 +17,22 @@ const tr = {
 }
 
 const Weather = (props) => {
+	const {data} = props
 	return (
 		<>
 			<Table bordered variant='dark' responsive size='lg' style={weather}>
 				<tbody>
 					<tr>
-						<td style={tr}>Location:</td>
+						<td style={tr}>Location: {data.name}, {data.sys.country}</td>
 					</tr>
 					<tr>
-						<td style={tr}>Temperature:</td>
+						<td style={tr}>Temperature: {data.main.temp}</td>
 					</tr>
 					<tr>
-						<td style={tr}>Humidity:</td>
+						<td style={tr}>Humidity: {data.main.humidity}</td>
 					</tr>
 					<tr>
-						<td style={tr}>Conditions:</td>
+						<td style={tr}>Conditions: {data.weather[0].description}</td>
 					</tr>
 				</tbody>
 			</Table>

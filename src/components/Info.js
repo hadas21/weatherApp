@@ -1,5 +1,5 @@
 // import React
-import React from 'react'
+import React, {useState} from 'react'
 import Location from './Location'
 import Weather from './Weather'
 
@@ -13,10 +13,19 @@ const info = {
 }
 
 const Info = (props) => {
+
+	const [location, setLocation] = useState({ city: '', country: '' })
+	const [data, setData] = useState({})
+console.log(data)
+
+
 	return (
 		<section style={info}>
-			<Location></Location>
-			<Weather></Weather>
+			<Location
+				location={location}
+				setLocation={setLocation}
+				setData={setData}></Location>
+			<Weather data={data}></Weather>
 		</section>
 	)
 }
