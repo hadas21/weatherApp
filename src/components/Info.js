@@ -15,8 +15,8 @@ const info = {
 const Info = (props) => {
 
 	const [location, setLocation] = useState({ city: '', country: '' })
-	const [data, setData] = useState({})
-console.log(data)
+	const [data, setData] = useState('')
+
 
 
 	return (
