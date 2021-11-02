@@ -45,13 +45,13 @@ const handleChange = (event) => {
 
 	setLocation((prevLocation) => {
 		const updatedField = { [event.target.name]: event.target.value }
-		console.log(updatedField)
+		
 		const editedLocation = Object.assign(
 			{},
 			prevLocation,
 			updatedField
 		)
-		console.log('new' + updatedField)
+	
 		return editedLocation
 	})
 }

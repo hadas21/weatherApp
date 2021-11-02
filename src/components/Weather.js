@@ -28,11 +28,11 @@ const Weather = (props) => {
 	const [conditions, setConditions] = useState('')
 
 	useEffect(() => {
-		console.log(data)
+		if(data){
 		setLocation( data.name, data.sys.country)
 		setTemperature(data.main.temp)
 		setHumidity(data.main.humidity)
-		setConditions(data.weather[0].description)
+		setConditions(data.weather[0].description)}
 	}, [data])
 
 	// const searchResult = (
